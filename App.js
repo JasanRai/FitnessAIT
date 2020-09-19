@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Header } from 'react-native';
-import Home from './components/HomeScreen'
-import Navigator from './components/HomeStack'
+import Program from './components/ProgramScreen'
+import Navigator from './components/Drawer'
 
 
 export default function App() {

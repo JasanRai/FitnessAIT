@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button} from 'react-native'
 
 
 
-export default function HomeScreen({navigation}) { 
+export default function ProgramScreen({navigation}) { 
 
 const pressHandler = () => {
     navigation.navigate('Program')
@@ -12,8 +12,8 @@ const pressHandler = () => {
 return (
 
     <View style = {styles.container}>
-        <Text>Home Screen</Text>
-        <Button title='Program' onPress={pressHandler} />
+        <Text>Program Screen</Text>
+        <Button title='Home' onPress={pressHandler} />
         
         
     </View>
@@ -25,4 +25,3 @@ const styles = StyleSheet.create({
         padding: 24
     }
 })
-
