@@ -14,7 +14,6 @@ const RootDrawerNavigator = createDrawerNavigator({
         screen: ProgramStack,
     }
 
-
 })
 
 export default createAppContainer(RootDrawerNavigator);

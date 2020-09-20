@@ -5,7 +5,10 @@ import Program from './ProgramScreen'
 
 const screens = {
     Program: {
-        screen : Program
+        screen : Program,
+        navigationOptions: {
+            title: 'Program'
+        }
     }
 
 

@@ -6,14 +6,14 @@ import { StyleSheet, Text, View, Button} from 'react-native'
 export default function HomeScreen({navigation}) { 
 
 const pressHandler = () => {
-    navigation.navigate('Program')
+    navigation.navigate('Cardio')
 }
 
 return (
 
     <View style = {styles.container}>
         <Text>Home Screen</Text>
-        <Button title='Program' onPress={pressHandler} />
+        <Button title='Cardio' onPress={pressHandler} />
         
         
     </View>

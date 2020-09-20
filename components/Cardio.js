@@ -3,11 +3,11 @@ import { StyleSheet, Text, View, Button} from 'react-native'
 
 
 
-export default function Programs() { 
+export default function Cardio() { 
 return (
 
     <View style = {styles.container}>
-        <Text>Program</Text>
+        <Text>Cardio</Text>
     </View>
 )   
 }
