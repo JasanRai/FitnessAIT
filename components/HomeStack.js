@@ -2,13 +2,16 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer } from 'react-navigation'
 import Home from './HomeScreen'
 import Cardio from'./Cardio'
+import Header from '../shared/Header'
+import React from 'react';
 
 const screens = {
     Home: {
         screen : Home,
-        navigationOptions: {
-            title: 'Home'
-            
+        navigationOptions:({ navigation }) => {
+            return{
+            headerTitle: () => <Header navigation={navigation} />,
+            }
         }
     },
 

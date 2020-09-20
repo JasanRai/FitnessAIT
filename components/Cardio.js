@@ -3,11 +3,19 @@ import { StyleSheet, Text, View, Button} from 'react-native'
 
 
 
-export default function Cardio() { 
+export default function Cardio({navigation}) { 
+
+const pressHandler = () => {
+    navigation.navigate('Home')
+}
+
 return (
 
     <View style = {styles.container}>
         <Text>Cardio</Text>
+        <Button title='Home' onPress={pressHandler} />
+        
+        
     </View>
 )   
 }
