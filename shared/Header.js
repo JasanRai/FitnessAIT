@@ -16,6 +16,7 @@ export default function Header({ navigation })
              <Text style={styles.headerText}>FitnessAIT</Text>
             </View>
         </View>
+        
     )
 
 }
