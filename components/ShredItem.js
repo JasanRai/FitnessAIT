@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
 
-export default class CardioItem extends React.Component {
+export default class ShredItem extends React.Component {
   render() {
     return (
       <View style={styles.menuItem}>

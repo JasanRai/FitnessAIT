@@ -5,6 +5,7 @@ import { createAppContainer } from "react-navigation";
 import Auth from "./Auth";
 import Home from "./HomeScreen";
 import Cardio from "./Cardio";
+import Bulk from "./Bulk";
 import Header from "../shared/Header";
 
 const screens = {
@@ -30,6 +31,13 @@ const screens = {
     screen: Cardio,
     navigationOptions: {
       title: "Cardio",
+    },
+  },
+
+  Bulk: {
+    screen: Bulk,
+    navigationOptions: {
+      title: "Bulk",
     },
   },
 };

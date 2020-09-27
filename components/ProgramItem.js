@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { Image } from "react-native-elements";
 
-export default function HomeItem({ itemImage, navigate }) {
+export default function ProgramItem({ itemImage, navigate }) {
   return (
     <View style={styles.menuItem}>
       <Image

@@ -3,32 +3,34 @@ import {
   StyleSheet,
   Text,
   View,
+  Button,
   ImageBackground,
-  TouchableOpacity,
   ScrollView,
 } from "react-native";
 
-import MenuItem from "./HomeItem";
+// import MenuItem from "./HomeItem";
+import MenuItem from "./ShredItem";
+import fitness from "../assets/fitness.jpg";
 import bulk from "../assets/bulk.jpg";
 import cardios from "../assets/cardios.jpg";
 
-export default function HomeScreen({ navigation }) {
-  const navigateBulk = () => navigation.navigate("Bulk");
-  const navigateCardio = () => navigation.navigate("Cardio");
+export default function Shred({ navigation }) {
+  const pressHandler = () => {
+    navigation.navigate("Home");
+  };
 
   return (
-    <ImageBackground
-      source={require("../assets/fitness.jpg")}
-      style={styles.container}
-    >
+    <ImageBackground source={fitness} style={styles.container}>
       <View style={styles.overlayContainer}>
         <View style={styles.top}>
-          <Text style={styles.header}>H O M E</Text>
+          <Text style={styles.header}>S H R E D</Text>
         </View>
         <ScrollView>
           <View style={styles.menuContainer}>
-            <MenuItem itemImage={bulk} navigate={navigateBulk} />
-            <MenuItem itemImage={cardios} navigate={navigateCardio} />
+            <MenuItem itemImage={bulk} />
+            <MenuItem itemImage={cardios} />
+            <MenuItem itemImage={fitness} />
+            <MenuItem itemImage={cardios} />
           </View>
         </ScrollView>
       </View>
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255, .1)",
   },
   menuContainer: {
-    height: 800,
+    height: 1500,
     flexDirection: "column",
     flexWrap: "wrap",
     opacity: 0.7,

@@ -1,7 +1,15 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  ImageBackground,
+  ScrollView,
+} from "react-native";
 
-import MenuItem from "./HomeItem";
+// import MenuItem from "./HomeItem";
+import MenuItem from "./CardioItem";
 import fitness from "../assets/fitness.jpg";
 import bulk from "../assets/bulk.jpg";
 import cardios from "../assets/cardios.jpg";
@@ -17,10 +25,14 @@ export default function Cardio({ navigation }) {
         <View style={styles.top}>
           <Text style={styles.header}>C A R D I O</Text>
         </View>
-        <View style={styles.menuContainer}>
-          <MenuItem itemImage={bulk} />
-          <MenuItem itemImage={cardios} />
-        </View>
+        <ScrollView>
+          <View style={styles.menuContainer}>
+            <MenuItem itemImage={bulk} />
+            <MenuItem itemImage={cardios} />
+            <MenuItem itemImage={fitness} />
+            <MenuItem itemImage={cardios} />
+          </View>
+        </ScrollView>
       </View>
     </ImageBackground>
   );
@@ -37,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(47,163,218, .4)",
   },
   top: {
-    height: "50%",
+    height: "30%",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -52,8 +64,8 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255, .1)",
   },
   menuContainer: {
-    height: "50%",
-    flexDirection: "row",
+    height: 1500,
+    flexDirection: "column",
     flexWrap: "wrap",
     opacity: 0.7,
     width: "100%",
