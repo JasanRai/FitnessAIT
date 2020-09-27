@@ -1,35 +1,44 @@
-import React from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import React from "react";
+import {
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Text,
+  ActivityIndicator,
+} from "react-native";
+import { Image } from "react-native-elements";
 
-export default class HomeItem extends React.Component {
-    render() {
-        return(
-            <View style={styles.menuItem}> 
-                <Image
-                    source={this.props.itemImage}
-                        style={styles.image} />
-
-            </View>
-        )
-    }
+export default function HomeItem({ itemImage, navigate }) {
+  return (
+    <View style={styles.menuItem}>
+      <Image
+        source={itemImage}
+        style={styles.image}
+        PlaceholderContent={<ActivityIndicator />}
+        onPress={() => navigate()}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    menuItem: {
-        width: '50%',
-        height: '50%',
-        padding: 10,
-        backgroundColor: '#ccc',
-        borderColor: '#000',
-        
-    },
-    image: {
-        width: '100%',
-        height: '100%',
-        flex: 1,
-        opacity: 1,
-        borderColor: '#fff',
-        resizeMode: 'contain'
-      
-    }
-})
+  menuItem: {
+    width: "50%",
+    height: "50%",
+    padding: 10,
+    backgroundColor: "#ccc",
+    borderColor: "#000",
+  },
+  image: {
+    width: 200,
+    height: 200,
+    opacity: 1,
+    borderColor: "#fff",
+    resizeMode: "contain",
+  },
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

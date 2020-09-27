@@ -1,27 +1,61 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button} from 'react-native'
+import React from "react";
+import { StyleSheet, Text, View, Button, ImageBackground } from "react-native";
 
+import MenuItem from "./HomeItem";
+import fitness from "../assets/fitness.jpg";
+import bulk from "../assets/bulk.jpg";
+import cardios from "../assets/cardios.jpg";
 
+export default function Cardio({ navigation }) {
+  const pressHandler = () => {
+    navigation.navigate("Home");
+  };
 
-export default function Cardio({navigation}) { 
-
-const pressHandler = () => {
-    navigation.navigate('Home')
-}
-
-return (
-
-    <View style = {styles.container}>
-        <Text>Cardio</Text>
-        <Button title='Home' onPress={pressHandler} />
-        
-        
-    </View>
-)   
+  return (
+    <ImageBackground source={fitness} style={styles.container}>
+      <View style={styles.overlayContainer}>
+        <View style={styles.top}>
+          <Text style={styles.header}>C A R D I O</Text>
+        </View>
+        <View style={styles.menuContainer}>
+          <MenuItem itemImage={bulk} />
+          <MenuItem itemImage={cardios} />
+        </View>
+      </View>
+    </ImageBackground>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        padding: 24
-    }
-})
+  container: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+  },
+  overLayContainer: {
+    flex: 1,
+    backgroundColor: "rgba(47,163,218, .4)",
+  },
+  top: {
+    height: "50%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  header: {
+    color: "#fff",
+    fontSize: 28,
+    borderColor: "#fff",
+    borderWidth: 3,
+    padding: 20,
+    paddingLeft: 40,
+    paddingRight: 40,
+    backgroundColor: "rgba(255,255,255, .1)",
+  },
+  menuContainer: {
+    height: "50%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    opacity: 0.7,
+    width: "100%",
+  },
+});
