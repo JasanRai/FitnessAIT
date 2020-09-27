@@ -1,4 +1,3 @@
-}
 import React from "react";
 import {
   StyleSheet,
@@ -29,8 +28,8 @@ export default function HomeScreen({ navigation }) {
         </View>
 
         <View style={styles.menuContainer}>
-          <MenuItem itemImage={bulk} navigate={navigateCardio} />
-          <MenuItem itemImage={cardios} />
+          <MenuItem itemImage={bulk} navigate={navigateBulk} />
+          <MenuItem itemImage={cardios} navigate={navigateCardio} />
         </View>
       </View>
     </ImageBackground>

@@ -2,15 +2,21 @@ import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 
-import Login from "./Login";
+import Auth from "./Auth";
 import Home from "./HomeScreen";
 import Cardio from "./Cardio";
 import Header from "../shared/Header";
 
 const screens = {
-  Login: {
-    screen: Login,
-  },
+  // Auth: {
+  //   screen: Auth,
+
+  //   navigationOptions: ({ navigation }) => {
+  //     return {
+  //       headerTitle: () => null,
+  //     };
+  //   },
+  // },
   Home: {
     screen: Home,
     navigationOptions: ({ navigation }) => {

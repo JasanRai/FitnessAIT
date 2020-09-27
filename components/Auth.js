@@ -11,6 +11,7 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Text, Input, Button } from "react-native-elements";
 
+import { firebase } from "../utils/firebase.config";
 import cover from "../assets/Cover.jpg";
 
 export default function Login({ navigation }) {
@@ -18,8 +19,50 @@ export default function Login({ navigation }) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState(null);
 
-  const handleLoginSignup = () => {};
+  const buttonDisable = email;
+
+  const handleLoginSignup = () => {
+    if (isSignup) {
+      // user is signing up...
+      return firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then((result) =>
+          result.user
+            .updateProfile({
+              displayName: firstName,
+            })
+            .then(() => {
+              setFirstName("");
+              setEmail("");
+              setPassword("");
+              setErrors(null);
+              navigation.navigate("Home");
+            })
+        )
+        .catch((e) => {
+          setFirstName("");
+          setEmail("");
+          setPassword("");
+          setErrors(e.message);
+        });
+    } else {
+      return firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then(() => {
+          navigation.navigate("Home");
+        })
+        .catch((error) => {
+          setErrors(error.message);
+          setFirstName("");
+          setEmail("");
+          setPassword("");
+        });
+    }
+  };
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -34,6 +77,23 @@ export default function Login({ navigation }) {
               </Text>
             </View>
             <View style={styles.formContainer}>
+              {errors && (
+                <View
+                  style={{
+                    width: "100%",
+                    backgroundColor: "#e87c03",
+                    paddingVertical: 15,
+                    paddingHorizontal: 20,
+                    marginBottom: 15,
+                    borderRadius: 4,
+                  }}
+                >
+                  <Text h4 h4Style={{ color: "#fff", fontSize: 16 }}>
+                    {errors}
+                  </Text>
+                </View>
+              )}
+
               {isSignup && (
                 <Input
                   value={firstName}

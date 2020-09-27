@@ -3,11 +3,11 @@ import { createAppContainer } from "react-navigation";
 
 import ProgramStack from "./ProgramStack";
 import HomeStack from "./HomeStack";
-import Login from "./Login";
+import Auth from "./Auth";
 
 const RootDrawerNavigator = createDrawerNavigator({
-  Login: {
-    screen: Login,
+  Auth: {
+    screen: Auth,
   },
 
   Home: {
