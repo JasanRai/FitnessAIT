@@ -8,7 +8,6 @@ import {
   ScrollView,
 } from "react-native";
 
-// import MenuItem from "./HomeItem";
 import MenuItem from "./BulkItem";
 import fitness from "../assets/fitness.jpg";
 import bulk from "../assets/bulk.jpg";

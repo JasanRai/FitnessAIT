@@ -3,34 +3,32 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   ImageBackground,
+  TouchableOpacity,
   ScrollView,
 } from "react-native";
 
-// import MenuItem from "./HomeItem";
 import MenuItem from "./CardioItem";
-import fitness from "../assets/fitness.jpg";
-import bulk from "../assets/bulk.jpg";
-import cardios from "../assets/cardios.jpg";
+import Csupreme from "../assets/cardioSupreme.jpg";
+import AnywhereCardio from "../assets/anywhereCardio.png";
 
 export default function Cardio({ navigation }) {
-  const pressHandler = () => {
-    navigation.navigate("Home");
-  };
+  const navigateCSupreme = () => navigation.navigate("CSupreme");
+  const navigateAnywhere = () => navigation.navigate("Anywhere");
 
   return (
-    <ImageBackground source={fitness} style={styles.container}>
+    <ImageBackground
+      source={require("../assets/fitness.jpg")}
+      style={styles.container}
+    >
       <View style={styles.overlayContainer}>
         <View style={styles.top}>
           <Text style={styles.header}>C A R D I O</Text>
         </View>
         <ScrollView>
           <View style={styles.menuContainer}>
-            <MenuItem itemImage={bulk} />
-            <MenuItem itemImage={cardios} />
-            <MenuItem itemImage={fitness} />
-            <MenuItem itemImage={cardios} />
+            <MenuItem itemImage={Csupreme} navigate={navigateCSupreme} />
+            <MenuItem itemImage={AnywhereCardio} navigate={navigateAnywhere} />
           </View>
         </ScrollView>
       </View>
@@ -64,10 +62,10 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255, .1)",
   },
   menuContainer: {
-    height: 1500,
+    height: 800,
     flexDirection: "column",
     flexWrap: "wrap",
-    opacity: 0.7,
+    opacity: 0.9,
     width: "100%",
   },
 });

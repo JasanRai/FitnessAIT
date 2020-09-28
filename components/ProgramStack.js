@@ -5,7 +5,7 @@ import Header from "../shared/Header";
 import Cardio from "./Cardio";
 import Bulk from "./Bulk";
 import Shred from "./Shred";
-import Cali from "./Cali";
+import Calisthenics from "./Calisthenics";
 import React from "react";
 
 const screens = {
@@ -30,17 +30,17 @@ const screens = {
       },
     },
 
+    Calisthenics: {
+      screen: Calisthenics,
+      navigationOptions: {
+        title: "Calisthenics",
+      },
+    },
+
     Shred: {
       screen: Shred,
       navigationOptions: {
         title: "Shred",
-      },
-    },
-
-    Cali: {
-      screen: Cali,
-      navigationOptions: {
-        title: "Calisthenic",
       },
     },
   },

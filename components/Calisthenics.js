@@ -8,15 +8,13 @@ import {
   ScrollView,
 } from "react-native";
 
-// import MenuItem from "./HomeItem";
-import MenuItem from "./CaliItem";
 import fitness from "../assets/fitness.jpg";
 import bulk from "../assets/bulk.jpg";
-import cardios from "../assets/cardios.jpg";
+import MenuItem from "./CaliItem";
 
-export default function Cali({ navigation }) {
+export default function Calisthenics({ navigation }) {
   const pressHandler = () => {
-    navigation.navigate("Program");
+    navigation.navigate("");
   };
 
   return (
@@ -28,9 +26,6 @@ export default function Cali({ navigation }) {
         <ScrollView>
           <View style={styles.menuContainer}>
             <MenuItem itemImage={bulk} />
-            <MenuItem itemImage={cardios} />
-            <MenuItem itemImage={fitness} />
-            <MenuItem itemImage={cardios} />
           </View>
         </ScrollView>
       </View>
@@ -41,11 +36,6 @@ export default function Cali({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: "100%",
-    height: "100%",
-  },
-  overLayContainer: {
-    flex: 1,
     backgroundColor: "rgba(47,163,218, .4)",
   },
   top: {
@@ -55,7 +45,7 @@ const styles = StyleSheet.create({
   },
   header: {
     color: "#fff",
-    fontSize: 28,
+    fontSize: 25,
     borderColor: "#fff",
     borderWidth: 3,
     padding: 20,
@@ -64,10 +54,10 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255, .1)",
   },
   menuContainer: {
-    height: 1500,
+    height: 1200,
     flexDirection: "column",
     flexWrap: "wrap",
-    opacity: 0.7,
+
     width: "100%",
   },
 });

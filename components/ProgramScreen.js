@@ -15,10 +15,10 @@ import shreds from "../assets/shred.jpg";
 import calis from "../assets/calis.jpg";
 
 export default function ProgramScreen({ navigation }) {
-  const navigateShred = () => navigation.navigate("Shred");
-  const navigateCali = () => navigation.navigate("Cali");
   const navigateBulk = () => navigation.navigate("Bulk");
   const navigateCardio = () => navigation.navigate("Cardio");
+  const navigateCalisthenics = () => navigation.navigate("Calisthenics");
+  const navigateShred = () => navigation.navigate("Shred");
 
   return (
     <ImageBackground
@@ -33,7 +33,7 @@ export default function ProgramScreen({ navigation }) {
           <View style={styles.menuContainer}>
             <MenuItem itemImage={bulk} navigate={navigateBulk} />
             <MenuItem itemImage={cardios} navigate={navigateCardio} />
-            <MenuItem itemImage={calis} navigate={navigateCali} />
+            <MenuItem itemImage={calis} navigate={navigateCalisthenics} />
             <MenuItem itemImage={shreds} navigate={navigateShred} />
           </View>
         </ScrollView>

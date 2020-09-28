@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ccc",
     borderColor: "#000",
   },
+
   image: {
     width: "100%",
     height: "100%",
