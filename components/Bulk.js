@@ -10,11 +10,15 @@ import {
 
 import MenuItem from "./BulkItem";
 import fitness from "../assets/fitness.jpg";
-import bulk from "../assets/bulk.jpg";
+import dbBulk from "../assets/db.jpg";
+import chest from "../assets/chest.jpg";
 
 export default function Bulk({ navigation }) {
+  const navigateChest = () => navigation.navigate("Chest");
+  const navigateDB = () => navigation.navigate("DB");
+
   const pressHandler = () => {
-    navigation.navigate("Home");
+    navigation.navigate("");
   };
 
   return (
@@ -25,10 +29,8 @@ export default function Bulk({ navigation }) {
         </View>
         <ScrollView>
           <View style={styles.menuContainer}>
-            <MenuItem itemImage={bulk} />
-            <MenuItem itemImage={bulk} />
-            <MenuItem itemImage={bulk} />
-            <MenuItem itemImage={bulk} />
+            <MenuItem itemImage={dbBulk} navigate={navigateDB} />
+            <MenuItem itemImage={chest} navigate={navigateChest} />
           </View>
         </ScrollView>
       </View>
@@ -62,10 +64,10 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255, .1)",
   },
   menuContainer: {
-    height: 1200,
+    height: 700,
     flexDirection: "column",
     flexWrap: "wrap",
-    opacity: 0.7,
+    opacity: 0.9,
     width: "100%",
   },
 });

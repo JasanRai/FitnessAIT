@@ -4,6 +4,7 @@ import { createAppContainer } from "react-navigation";
 import ProgramStack from "./ProgramStack";
 import HomeStack from "./HomeStack";
 import Auth from "./Auth";
+import Gallery from "./Gallery";
 
 const RootDrawerNavigator = createDrawerNavigator({
   Auth: {
@@ -16,6 +17,9 @@ const RootDrawerNavigator = createDrawerNavigator({
 
   Program: {
     screen: ProgramStack,
+  },
+  Gallery: {
+    screen: Gallery,
   },
 });
 

@@ -20,6 +20,11 @@ const screens = {
     title: "Cardio Supreme",
   },
 
+  Anywhere: {
+    screen: Anywhere,
+    title: "Anywhere Cardio"
+  }
+
 
 
 },

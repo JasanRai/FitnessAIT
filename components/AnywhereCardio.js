@@ -8,7 +8,7 @@ import {
   Image,
 } from "react-native";
 
-import ac from "../assets/anywhereCardio.png";
+import ac from "../assets/anywhere.jpg";
 import fitness from "../assets/fitness.jpg";
 
 export default function AnywhereCardio({ navigation }) {

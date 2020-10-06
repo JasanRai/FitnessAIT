@@ -1,14 +1,18 @@
 import React from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, ActivityIndicator } from "react-native";
+import { Image } from "react-native-elements";
 
-export default class BulkItem extends React.Component {
-  render() {
-    return (
-      <View style={styles.menuItem}>
-        <Image source={this.props.itemImage} style={styles.image} />
-      </View>
-    );
-  }
+export default function BulkItem({ itemImage, navigate }) {
+  return (
+    <View style={styles.menuItem}>
+      <Image
+        source={itemImage}
+        style={styles.image}
+        PlaceholderContent={<ActivityIndicator />}
+        onPress={() => navigate()}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -22,9 +26,13 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-    flex: 1,
     opacity: 1,
     borderColor: "#fff",
     resizeMode: "contain",
+  },
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

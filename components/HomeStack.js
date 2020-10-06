@@ -11,6 +11,8 @@ import Bulk from "./Bulk";
 import CSupreme from "./CSupreme";
 import Header from "../shared/Header";
 import Anywhere from "./AnywhereCardio";
+import DB from "./DBBulk";
+import Chest from "./ChestBulk";
 
 const screens = {
   // Auth: {
@@ -70,6 +72,20 @@ const screens = {
     screen: Anywhere,
     navigationOptions: {
       title: "Anywhere Cardio",
+    },
+  },
+
+  DB: {
+    screen: DB,
+    navigationOptions: {
+      title: "DumbBell Bulking",
+    },
+  },
+
+  Chest: {
+    screen: Chest,
+    navigationOptions: {
+      title: "Chest Bulking",
     },
   },
 };
