@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     height: 1200,
     flexDirection: "column",
     flexWrap: "wrap",
-    opacity: 0.7,
+    opacity: 1,
     width: "100%",
   },
 });

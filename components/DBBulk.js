@@ -8,7 +8,7 @@ import {
   Image,
 } from "react-native";
 
-import DB from "../assets/db.jpg";
+import DB from "../assets/dbBulk.jpg";
 import fitness from "../assets/fitness.jpg";
 
 export default function DBBulk({ navigation }) {
